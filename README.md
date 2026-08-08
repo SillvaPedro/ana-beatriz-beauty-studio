@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ana Beatriz Beauty Studio
 
-## Getting Started
+Site profissional para o estúdio de maquiagem **Ana Beatriz Beauty Studio**, com portfólio,
+cursos online de automaquiagem e agendamento de atendimentos via WhatsApp.
 
-First, run the development server:
+## Páginas
+
+- `/` — Início: hero, serviços, portfólio em destaque, cursos, sobre, depoimentos e CTA
+- `/portfolio` — Galeria de trabalhos com categorias
+- `/cursos` — Cursos online de autoatendimento
+- `/agendamento` — Formulário de agendamento (envia para o WhatsApp)
+
+## Como rodar localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como editar o conteúdo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Quase todo o conteúdo fica em **`lib/site.ts`**:
 
-## Learn More
+| O que | Onde |
+| --- | --- |
+| Nome, Instagram, WhatsApp, e-mail, cidade | `site` em `lib/site.ts` |
+| Cursos e valores | `courses` em `lib/site.ts` |
+| Fotos do portfólio | `portfolioItems` em `lib/site.ts` |
 
-To learn more about Next.js, take a look at the following resources:
+### Trocar as fotos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As imagens atuais são placeholders em `public/images/`. Para usar as fotos reais:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Copie suas fotos para `public/images/` (mantendo os nomes dos arquivos) ou
+2. Atualize os caminhos (`src`) no arquivo `lib/site.ts`.
 
-## Deploy on Vercel
+Tamanhos de referência: hero e perfil ~800×1000; portfólio ~600×750.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Ajustar WhatsApp/Instagram
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Em `lib/site.ts`, atualize:
+
+```ts
+whatsapp: "https://wa.me/5511999999999",   // DDD + número, sem espaços
+whatsappDisplay: "(11) 99999-9999",
+instagram: "https://instagram.com/anabeatrizbeauty",
+instagramHandle: "@anabeatrizbeauty",
+```
+
+## Publicar na Vercel (gratuito)
+
+1. Suba este projeto para um repositório no GitHub.
+2. Crie uma conta em [vercel.com](https://vercel.com) (login com o GitHub).
+3. Clique em **Add New → Project**, escolha o repositório e **Deploy**.
+4. Pronto: deploy automático a cada `git push`.
+
+## Scripts úteis
+
+- `npm run dev` — desenvolvimento
+- `npm run build` — build de produção
+- `npm run start` — serve o build
+- `npm run lint` — checagem de lint
+- `node scripts/generate-images.js` — regenera as imagens placeholder
