@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 const links = [
   { href: "/", label: "InÃ­cio" },
-  { href: "/portfolio", label: "PortfÃ³lio" },
+  { href: "/portfolio", label: "portfolio" },
   { href: "/cursos", label: "Cursos" },
   { href: "/agendamento", label: "Agendamento" },
 ];
@@ -13,13 +13,13 @@ export default function Footer() {
     <footer className="mt-20 bg-gradient-to-br from-brown-900 to-beige-700 text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-display text-xl font-semibold">Ana Beatriz Beauty Studio</p>
+          <p className="font-display text-xl font-semibold">Ana Beatriz Makeup Studio</p>
           <p className="mt-3 max-w-xs text-sm text-white/80">
-            {site.tagline}. Maquiagem profissional e cursos online de automaquiagem.
+            Maquiagem profissional e cursos online de automaquiagem.
           </p>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-beige-200">NavegaÃ§Ã£o</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-beige-200">Navegação</p>
           <ul className="mt-4 space-y-2">
             {links.map((link) => (
               <li key={link.href}>
