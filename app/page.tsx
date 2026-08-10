@@ -65,20 +65,6 @@ export default function Home() {
                 Ver cursos online
               </Link>
             </div>
-            <div className="mt-10 flex flex-wrap gap-8">
-              <div>
-                <p className="font-display text-2xl font-bold text-ink">+500</p>
-                <p className="text-sm text-ink/60">maquiagens realizadas</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl font-bold text-ink">+1.200</p>
-                <p className="text-sm text-ink/60">alunas nos cursos</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl font-bold text-ink">5.0</p>
-                <p className="text-sm text-ink/60">avaliaÃ§Ã£o mÃ©dia</p>
-              </div>
-            </div>
           </div>
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brown-400 to-beige-400 opacity-30 blur-2xl" />
