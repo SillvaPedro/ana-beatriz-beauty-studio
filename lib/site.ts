@@ -4,7 +4,7 @@ export const site = {
   description:
     "Studio de maquiagem com atendimento personalizado e cursos online de automaquiagem. Realce sua beleza com Ana Beatriz.",
   instagram: "https://www.instagram.com/anabeatrizbeauty_studio/",
-  instagramHandle: "@anabeatrizbeauty",
+  instagramHandle: "@anabeatrizbeauty_studio",
   whatsapp: "https://wa.me/83998064139",
   whatsappDisplay: "(83) 99806-4139",
   email: "contato@anabeatrizbeauty.com.br",
