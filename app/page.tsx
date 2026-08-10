@@ -88,7 +88,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brown-400 to-beige-400 opacity-30 blur-2xl" />
             <Image
-              src="/images/hero.svg"
+              src="/images/img - principal.jpeg"
               alt="Maquiagem profissional Ana Beatriz"
               width={640}
               height={720}
