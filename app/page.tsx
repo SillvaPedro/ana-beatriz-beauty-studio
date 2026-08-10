@@ -43,19 +43,14 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-brown-50 via-cream to-beige-50">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
           <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-brown-600">
-              Maquiagem & cursos online
+            <p className="text-lg leading-relaxed text-ink/80">
+              Aqui, cada produção é pensada especialmente para você, valorizando sua essência e
+              deixando você ainda mais linda para viver e registrar momentos inesquecíveis.
             </p>
-            <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-              Realce sua beleza com{" "}
-              <span className="bg-gradient-to-r from-brown-600 to-beige-500 bg-clip-text text-transparent">
-                Ana Beatriz
-              </span>
+            <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
+              Ana Beatriz Makeup Studio
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink/70">
-              {site.description} Aprenda automaquiagem no seu ritmo ou agende um atendimento
-              personalizado.
-            </p>
+            <p className="mt-2 text-lg font-semibold text-brown-600">Sua beleza, do seu jeito. ✨</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/agendamento"
