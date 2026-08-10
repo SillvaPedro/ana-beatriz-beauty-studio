@@ -1,12 +1,12 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
 const links = [
-  { href: "/", label: "Início" },
-  { href: "/portfolio", label: "Portfólio" },
+  { href: "/", label: "InÃ­cio" },
+  { href: "/portfolio", label: "PortfÃ³lio" },
   { href: "/cursos", label: "Cursos" },
   { href: "/agendamento", label: "Agendamento" },
 ];
@@ -15,15 +15,15 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-blush-100 bg-cream/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-brown-100 bg-cream/90 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blush-500 to-gold-400 text-sm font-bold text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-brown-500 to-beige-400 text-sm font-bold text-white">
             AB
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-ink">
             Ana Beatriz
-            <span className="text-blush-600"> Studio</span>
+            <span className="text-brown-600"> Studio</span>
           </span>
         </Link>
 
@@ -32,7 +32,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold text-ink/80 transition-colors hover:text-blush-600"
+              className="text-sm font-semibold text-ink/80 transition-colors hover:text-brown-600"
             >
               {link.label}
             </Link>
@@ -41,7 +41,7 @@ export default function Header() {
             href={site.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-gradient-to-r from-blush-600 to-gold-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
+            className="rounded-full bg-gradient-to-r from-brown-600 to-beige-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
           >
             Agendar no WhatsApp
           </a>
@@ -71,14 +71,14 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div className="border-t border-blush-100 bg-cream px-4 py-4 md:hidden">
+        <div className="border-t border-brown-100 bg-cream px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:bg-blush-50 hover:text-blush-600"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-ink/80 transition-colors hover:bg-brown-50 hover:text-brown-600"
               >
                 {link.label}
               </Link>
@@ -88,7 +88,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-1 rounded-full bg-gradient-to-r from-blush-600 to-gold-500 px-5 py-2.5 text-center text-sm font-semibold text-white"
+              className="mt-1 rounded-full bg-gradient-to-r from-brown-600 to-beige-500 px-5 py-2.5 text-center text-sm font-semibold text-white"
             >
               Agendar no WhatsApp
             </a>

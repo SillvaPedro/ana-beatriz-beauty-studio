@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { portfolioItems, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Portfólio",
+  title: "PortfÃ³lio",
   description: "Trabalhos de maquiagem profissional realizados pela Ana Beatriz.",
 };
 
@@ -13,13 +13,13 @@ export default function PortfolioPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <div className="max-w-2xl">
-        <p className="text-sm font-bold uppercase tracking-widest text-blush-600">Portfólio</p>
+        <p className="text-sm font-bold uppercase tracking-widest text-brown-600">PortfÃ³lio</p>
         <h1 className="mt-2 font-display text-4xl font-bold text-ink">
-          Transformações reais
+          TransformaÃ§Ãµes reais
         </h1>
         <p className="mt-4 text-ink/70">
-          Alguns dos looks que já entreguei para noivas, eventos e ensaios. Cada maquiagem é
-          pensada para realçar a beleza única de cada cliente.
+          Alguns dos looks que jÃ¡ entreguei para noivas, eventos e ensaios. Cada maquiagem Ã©
+          pensada para realÃ§ar a beleza Ãºnica de cada cliente.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export default function PortfolioPage() {
           <a
             key={category}
             href={category === "Todos" ? "#todos" : `#${category.toLowerCase().replace(" ", "-")}`}
-            className="rounded-full border border-blush-200 px-5 py-2 text-sm font-semibold text-blush-700 transition-colors hover:bg-blush-600 hover:text-white"
+            className="rounded-full border border-brown-200 px-5 py-2 text-sm font-semibold text-brown-700 transition-colors hover:bg-brown-600 hover:text-white"
           >
             {category}
           </a>
@@ -45,9 +45,9 @@ export default function PortfolioPage() {
               height={750}
               className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-blush-950/70 to-transparent p-5 opacity-0 transition-opacity group-hover:opacity-100">
+            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-brown-950/70 to-transparent p-5 opacity-0 transition-opacity group-hover:opacity-100">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-gold-200">
+                <p className="text-xs font-semibold uppercase tracking-wider text-beige-200">
                   {item.category}
                 </p>
                 <p className="font-display text-xl font-semibold text-white">{item.title}</p>
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
         ))}
       </div>
 
-      <div className="mt-14 rounded-2xl border border-blush-100 bg-gradient-to-br from-blush-50 to-gold-50 p-8 text-center">
+      <div className="mt-14 rounded-2xl border border-brown-100 bg-gradient-to-br from-brown-50 to-beige-50 p-8 text-center">
         <h2 className="font-display text-2xl font-bold text-ink">
           Quer um look assim no seu momento especial?
         </h2>
@@ -68,7 +68,7 @@ export default function PortfolioPage() {
           href={site.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block rounded-full bg-gradient-to-r from-blush-600 to-gold-500 px-7 py-3 text-sm font-semibold text-white shadow-md transition-opacity hover:opacity-90"
+          className="mt-6 inline-block rounded-full bg-gradient-to-r from-brown-600 to-beige-500 px-7 py-3 text-sm font-semibold text-white shadow-md transition-opacity hover:opacity-90"
         >
           Agendar no WhatsApp
         </a>

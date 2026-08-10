@@ -1,37 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-  --color-blush-50: #fdf2f8;
-  --color-blush-100: #fce7f3;
-  --color-blush-200: #fbcfe8;
-  --color-blush-300: #f9a8d4;
-  --color-blush-400: #f472b6;
-  --color-blush-500: #ec4899;
-  --color-blush-600: #db2777;
-  --color-blush-700: #be185d;
-  --color-blush-800: #9d174d;
-  --color-blush-900: #831843;
-  --color-blush-950: #500724;
+  --color-brown-50: #f5efe9;
+  --color-brown-100: #e8dccd;
+  --color-brown-200: #d3bca3;
+  --color-brown-300: #b89975;
+  --color-brown-400: #9d7550;
+  --color-brown-500: #845c39;
+  --color-brown-600: #6b4a2e;
+  --color-brown-700: #553a25;
+  --color-brown-800: #452f1f;
+  --color-brown-900: #38271a;
+  --color-brown-950: #22150c;
 
-  --color-gold-50: #fbf7eb;
-  --color-gold-100: #f6edcb;
-  --color-gold-200: #eeda98;
-  --color-gold-300: #e5c25e;
-  --color-gold-400: #d4af37;
-  --color-gold-500: #b8860b;
-  --color-gold-600: #9a6a0d;
-  --color-gold-700: #7c4d10;
+  --color-beige-50: #faf6f0;
+  --color-beige-100: #f3ebe0;
+  --color-beige-200: #e7d7c2;
+  --color-beige-300: #d6bd9e;
+  --color-beige-400: #c39f77;
+  --color-beige-500: #b18358;
+  --color-beige-600: #9a6c44;
+  --color-beige-700: #7d5739;
 
-  --color-cream: #fdf8f3;
-  --color-ink: #2d1a22;
+  --color-cream: #faf6f0;
+  --color-ink: #2a1f18;
 
   --font-sans: var(--font-nunito);
   --font-display: var(--font-playfair);
 }
 
 :root {
-  --background: #fdf8f3;
-  --foreground: #2d1a22;
+  --background: #faf6f0;
+  --foreground: #2a1f18;
 }
 
 html {
@@ -45,7 +45,7 @@ body {
 }
 
 ::selection {
-  background: #db2777;
+  background: #6b4a2e;
   color: #fff;
 }
 
