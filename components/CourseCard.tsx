@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { site } from "@/lib/site";
 import type { course } from "@/lib/types";
 
@@ -36,7 +36,7 @@ export default function CourseCard({ course }: { course: course }) {
             )}
             <p className="text-lg font-bold text-brown-700">{course.price}</p>
             <p className="text-xs text-ink/60">
-              {course.duration} Â· {course.lessons} aulas
+              {course.duration} · {course.lessons} aulas
             </p>
           </div>
           <a

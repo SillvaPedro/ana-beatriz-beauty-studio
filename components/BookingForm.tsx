@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { site } from "@/lib/site";
@@ -6,8 +6,8 @@ import { site } from "@/lib/site";
 const serviceOptions = [
   "Maquiagem de noiva",
   "Maquiagem para evento",
-  "Ensaios fotogrÃ¡ficos",
-  "Atendimento em domicÃ­lio",
+  "Ensaios fotográficos",
+  "Atendimento em domicílio",
   "Outro",
 ];
 
@@ -19,11 +19,11 @@ export default function BookingForm() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const text = `OlÃ¡, Ana Beatriz! Gostaria de agendar um atendimento.%0A%0ANome: ${encodeURIComponent(
+    const text = `Olá, Ana Beatriz! Gostaria de agendar um atendimento.%0A%0ANome: ${encodeURIComponent(
       name
-    )}%0AServiÃ§o: ${encodeURIComponent(service)}%0AData desejada: ${encodeURIComponent(
+    )}%0AServiço: ${encodeURIComponent(service)}%0AData desejada: ${encodeURIComponent(
       date || "A combinar"
-    )}%0AObservaÃ§Ãµes: ${encodeURIComponent(message || "Nenhuma")}`;
+    )}%0AObservações: ${encodeURIComponent(message || "Nenhuma")}`;
     window.open(`${site.whatsapp}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
@@ -50,7 +50,7 @@ export default function BookingForm() {
 
       <div>
         <label htmlFor="service" className={labelClass}>
-          ServiÃ§o desejado
+          Serviço desejado
         </label>
         <select
           id="service"
@@ -81,14 +81,14 @@ export default function BookingForm() {
 
       <div>
         <label htmlFor="message" className={labelClass}>
-          ObservaÃ§Ãµes <span className="font-normal text-ink/50">(opcional)</span>
+          Observações <span className="font-normal text-ink/50">(opcional)</span>
         </label>
         <textarea
           id="message"
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Conte um pouco sobre o que vocÃª precisa..."
+          placeholder="Conte um pouco sobre o que você precisa..."
           className={inputClass}
         />
       </div>
@@ -100,7 +100,7 @@ export default function BookingForm() {
         Enviar pelo WhatsApp
       </button>
       <p className="text-center text-xs text-ink/60">
-        Ao enviar, vocÃª serÃ¡ direcionada ao WhatsApp para confirmar a disponibilidade.
+        Ao enviar, você será direcionada ao WhatsApp para confirmar a disponibilidade.
       </p>
     </form>
   );

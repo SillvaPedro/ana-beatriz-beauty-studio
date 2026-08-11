@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import BookingForm from "@/components/BookingForm";
 
@@ -11,25 +11,25 @@ export const metadata: Metadata = {
 const services = [
   { id: "noivas", label: "Maquiagem de noiva", price: "A partir de R$ 450" },
   { id: "eventos", label: "Maquiagem para evento", price: "A partir de R$ 180" },
-  { id: "ensaios", label: "Ensaios fotogrÃ¡ficos", price: "A partir de R$ 250" },
-  { id: "domicilio", label: "Atendimento em domicÃ­lio", price: "Consulte" },
+  { id: "ensaios", label: "Ensaios fotográficos", price: "A partir de R$ 250" },
+  { id: "domicilio", label: "Atendimento em domicílio", price: "Consulte" },
 ];
 
 const faqs = [
   {
     question: "Como funciona o agendamento?",
     answer:
-      "Preencha o formulÃ¡rio e vocÃª serÃ¡ direcionada ao WhatsApp com a sua solicitaÃ§Ã£o. A Ana Beatriz confirma disponibilidade e combina tudo por lÃ¡.",
+      "Preencha o formulário e você será direcionada ao WhatsApp com a sua solicitação. A Ana Beatriz confirma disponibilidade e combina tudo por lá.",
   },
   {
-    question: "VocÃªs atendem em domicÃ­lio?",
+    question: "Vocês atendem em domicílio?",
     answer:
-      "Sim! Atendemos em domicÃ­lio em SÃ£o Paulo e regiÃ£o, com taxa de deslocamento calculada conforme a distÃ¢ncia.",
+      "Sim! Atendemos em domicílio em São Paulo e região, com taxa de deslocamento calculada conforme a distância.",
   },
   {
     question: "Preciso pagar sinal para reservar?",
     answer:
-      "Sim, Ã© necessÃ¡rio um sinal para garantir a data. O restante pode ser combinado no dia do atendimento.",
+      "Sim, é necessário um sinal para garantir a data. O restante pode ser combinado no dia do atendimento.",
   },
 ];
 
@@ -42,8 +42,8 @@ export default function AgendamentoPage() {
           Agende sua maquiagem
         </h1>
         <p className="mt-4 text-ink/70">
-          Escolha o serviÃ§o, preencha seus dados e envie a solicitaÃ§Ã£o pelo WhatsApp. VocÃª recebe a
-          confirmaÃ§Ã£o rapidinho.
+          Escolha o serviço, preencha seus dados e envie a solicitação pelo WhatsApp. Você recebe a
+          confirmação rapidinho.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export default function AgendamentoPage() {
 
         <div className="space-y-6 lg:col-span-2">
           <div className="rounded-2xl border border-brown-100 bg-white p-7 shadow-sm">
-            <h2 className="font-display text-xl font-bold text-ink">ServiÃ§os e valores</h2>
+            <h2 className="font-display text-xl font-bold text-ink">Serviços e valores</h2>
             <ul className="mt-4 divide-y divide-brown-50">
               {services.map((service) => (
                 <li key={service.id} className="flex items-center justify-between py-3 text-sm">
@@ -66,7 +66,7 @@ export default function AgendamentoPage() {
               ))}
             </ul>
             <p className="mt-4 text-xs text-ink/60">
-              Valores sujeitos a alteraÃ§Ã£o conforme regiÃ£o e detalhes do atendimento.
+              Valores sujeitos a alteração conforme região e detalhes do atendimento.
             </p>
           </div>
 

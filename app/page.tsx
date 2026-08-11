@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import { courses, portfolioItems, site } from "@/lib/site";
@@ -6,24 +6,24 @@ import { courses, portfolioItems, site } from "@/lib/site";
 const services = [
   {
     title: "Maquiagem Profissional",
-    description: "Eventos, noivas, ensaios e ocasiÃµes especiais com acabamento impecÃ¡vel.",
+    description: "Eventos, noivas, ensaios e ocasiões especiais com acabamento impecável.",
     icon: "M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z",
   },
   {
     title: "Cursos Online",
-    description: "Autoatendimento: aprenda no seu ritmo, com acesso vitalÃ­cio e certificado.",
+    description: "Autoatendimento: aprenda no seu ritmo, com acesso vitalício e certificado.",
     icon: "M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H9l-5 4V5zm6 3v4l3-2z",
   },
   {
-    title: "Atendimento DomicÃ­lio",
-    description: "Vou atÃ© vocÃª no dia do evento. Conforto e comodidade para o seu momento.",
+    title: "Atendimento Domicílio",
+    description: "Vou até você no dia do evento. Conforto e comodidade para o seu momento.",
     icon: "M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9z",
   },
 ];
 
 const testimonials = [
   {
-    text: "Fiz o curso de automaquiagem e hoje consigo montar looks lindos para qualquer ocasiÃ£o. As aulas sÃ£o claras e muito didÃ¡ticas!",
+    text: "Fiz o curso de automaquiagem e hoje consigo montar looks lindos para qualquer ocasião. As aulas são claras e muito didáticas!",
     author: "Mariana S.",
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     author: "Juliana P.",
   },
   {
-    text: "O curso profissional mudou minha carreira. Aprendi tÃ©cnicas, precificaÃ§Ã£o e como atender clientes. Estou faturando com maquiagem!",
+    text: "O curso profissional mudou minha carreira. Aprendi técnicas, precificação e como atender clientes. Estou faturando com maquiagem!",
     author: "Carla M.",
   },
 ];
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-brown-600">PortfÃ³lio</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-brown-600">Portfólio</p>
               <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
                 Trabalhos recentes
               </h2>
@@ -114,7 +114,7 @@ export default function Home() {
               href="/portfolio"
               className="text-sm font-semibold text-brown-600 transition-colors hover:text-beige-500"
             >
-              Ver portfÃ³lio completo â†’
+              Ver portfólio completo →
             </Link>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -151,7 +151,7 @@ export default function Home() {
             Aprenda no seu ritmo
           </h2>
           <p className="mt-4 text-ink/70">
-            Aulas gravadas, acesso vitalÃ­cio e certificado de conclusÃ£o. Comece hoje mesmo.
+            Aulas gravadas, acesso vitalício e certificado de conclusão. Comece hoje mesmo.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -177,16 +177,16 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <p className="text-sm font-bold uppercase tracking-widest text-brown-600">Sobre</p>
             <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
-              OlÃ¡, eu sou a Ana Beatriz
+              Olá, eu sou a Ana Beatriz
             </h2>
             <p className="mt-5 leading-relaxed text-ink/70">
-              HÃ¡ mais de 7 anos eu transformo a forma como minhas clientes e alunas se enxergam.
-              Especialista em maquiagem para eventos e noivas, criei cursos online para que vocÃª
-              aprenda automaquiagem â€” do bÃ¡sico ao profissional â€” de forma simples e no seu tempo.
+              Há mais de 7 anos eu transformo a forma como minhas clientes e alunas se enxergam.
+              Especialista em maquiagem para eventos e noivas, criei cursos online para que você
+              aprenda automaquiagem — do básico ao profissional — de forma simples e no seu tempo.
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                "Atendimento em SÃ£o Paulo e regiÃ£o",
+                "Atendimento em São Paulo e região",
                 "Mais de 500 maquiagens realizadas",
                 "Cursos online com suporte direto",
               ].map((item) => (
@@ -224,7 +224,7 @@ export default function Home() {
             {testimonials.map((t) => (
               <figure key={t.author} className="rounded-2xl border border-brown-100 bg-white p-7 shadow-sm">
                 <div className="flex gap-1 text-beige-400">
-                  {"â˜…â˜…â˜…â˜…â˜…".split("").map((star, i) => (
+                  {"★★★★★".split("").map((star, i) => (
                     <span key={i} className="text-lg">
                       {star}
                     </span>
@@ -249,7 +249,7 @@ export default function Home() {
             Pronta para arrasar?
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-white/90">
-            Agende sua maquiagem ou garanta seu acesso aos cursos online com condiÃ§Ãµes especiais.
+            Agende sua maquiagem ou garanta seu acesso aos cursos online com condições especiais.
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-4">
             <Link

@@ -1,9 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { portfolioItems, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "PortfÃ³lio",
+  title: "Portfólio",
   description: "Trabalhos de maquiagem profissional realizados pela Ana Beatriz.",
 };
 
@@ -13,13 +13,13 @@ export default function PortfolioPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <div className="max-w-2xl">
-        <p className="text-sm font-bold uppercase tracking-widest text-brown-600">PortfÃ³lio</p>
+        <p className="text-sm font-bold uppercase tracking-widest text-brown-600">Portfólio</p>
         <h1 className="mt-2 font-display text-4xl font-bold text-ink">
-          TransformaÃ§Ãµes reais
+          Transformações reais
         </h1>
         <p className="mt-4 text-ink/70">
-          Alguns dos looks que jÃ¡ entreguei para noivas, eventos e ensaios. Cada maquiagem Ã©
-          pensada para realÃ§ar a beleza Ãºnica de cada cliente.
+          Alguns dos looks que já entreguei para noivas, eventos e ensaios. Cada maquiagem é
+          pensada para realçar a beleza única de cada cliente.
         </p>
       </div>
 

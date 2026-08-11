@@ -5,8 +5,8 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const links = [
-  { href: "/", label: "InÃ­cio" },
-  { href: "/portfolio", label: "PortfÃ³lio" },
+  { href: "/", label: "Início" },
+  { href: "/portfolio", label: "Portfólio" },
   { href: "/cursos", label: "Cursos" },
   { href: "/agendamento", label: "Agendamento" },
 ];

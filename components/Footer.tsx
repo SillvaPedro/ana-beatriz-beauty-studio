@@ -2,7 +2,7 @@
 import { site } from "@/lib/site";
 
 const links = [
-  { href: "/", label: "InÃ­cio" },
+  { href: "/", label: "Início" },
   { href: "/portfolio", label: "Portfólio" },
   { href: "/cursos", label: "Cursos" },
   { href: "/agendamento", label: "Agendamento" },
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/15 py-4 text-center text-xs text-white/60">
-        Â© {new Date().getFullYear()} {site.name}. Todos os direitos reservados.
+        © {new Date().getFullYear()} {site.name}. Todos os direitos reservados.
       </div>
     </footer>
   );
