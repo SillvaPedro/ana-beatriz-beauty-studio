@@ -3,21 +3,23 @@ import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import { courses, portfolioItems, site } from "@/lib/site";
 
-const services = [
+const serviceGroups = [
   {
-    title: "Maquiagem Profissional",
-    description: "Eventos, noivas, ensaios e ocasiões especiais com acabamento impecável.",
-    icon: "M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z",
+    title: "Make & Cabelo",
+    items: [
+      { name: "Make", price: "R$80,00" },
+      { name: "Make & Cabelo", price: "R$150,00" },
+      { name: "Combo Make + Cabelo + Fotos editadas (estúdio)", price: "R$200,00" },
+      { name: "Combo Make + Cabelo + Fotos editadas (externas)", price: "R$250,00" },
+    ],
   },
   {
-    title: "Curso de Automaquiagem",
-    description: "Aula presencial e personalizada, com apostila inclusa, para você aprender no seu ritmo.",
-    icon: "M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H9l-5 4V5zm6 3v4l3-2z",
-  },
-  {
-    title: "Atendimento Domicílio",
-    description: "Vou até você no dia do evento. Conforto e comodidade para o seu momento.",
-    icon: "M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1v-9z",
+    title: "Mídia & Criação",
+    items: [
+      { name: "Edição de vídeo gravado pelo cliente", price: "R$50,00" },
+      { name: "Cobertura de stories", price: "R$150,00" },
+      { name: "Artes para perfil comercial", price: "R$50,00 (por arte)" },
+    ],
   },
 ];
 
@@ -69,23 +71,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Serviços e Valores */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="grid gap-6 md:grid-cols-3">
-          {services.map((service) => (
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-brown-600">Serviços e valores</p>
+          <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
+            Ana Beatriz Makeup Beauty Stúdio
+          </h2>
+          <p className="mt-4 text-ink/70">
+            Ana Beatriz · Maquiadora Pro e Filmaker
+          </p>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {serviceGroups.map((group) => (
             <div
-              key={service.title}
-              className="rounded-2xl border border-brown-100 bg-white p-7 shadow-sm transition-shadow hover:shadow-lg"
+              key={group.title}
+              className="rounded-2xl border border-brown-100 bg-white p-7 shadow-sm"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brown-500 to-beige-400 text-white">
-                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
-                  <path d={service.icon} />
-                </svg>
-              </div>
-              <h3 className="mt-5 font-display text-xl font-semibold text-ink">{service.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink/70">{service.description}</p>
+              <h3 className="font-display text-xl font-semibold text-ink">{group.title}</h3>
+              <ul className="mt-5 space-y-4">
+                {group.items.map((item) => (
+                  <li key={item.name}>
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-sm leading-snug text-ink/80">{item.name}</span>
+                      <span className="shrink-0 font-semibold text-brown-700">{item.price}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brown-700 to-beige-600 p-7 text-white shadow-md">
+            <div className="pointer-events-none absolute -top-10 -right-10 h-36 w-36 rounded-full bg-white/10" />
+            <p className="text-sm font-bold uppercase tracking-widest text-beige-200">Imperdível!!</p>
+            <h3 className="mt-3 font-display text-2xl font-bold">
+              Vídeo + edição + fotos + cobertura de stories do dia completo
+            </h3>
+            <div className="mt-6 flex items-center justify-between gap-3">
+              <span className="text-sm text-white/90">Valor promocional</span>
+              <span className="text-3xl font-bold">R$300,00</span>
+            </div>
+          </div>
         </div>
       </section>
 
