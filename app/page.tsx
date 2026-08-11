@@ -66,17 +66,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brown-400 to-beige-400 opacity-30 blur-2xl" />
-            <Image
-              src="/images/img - principal.jpeg"
-              alt="Maquiagem profissional Ana Beatriz"
-              width={640}
-              height={720}
-              priority
-              className="relative w-full rounded-[2rem] border-4 border-white object-cover shadow-xl"
-            />
-          </div>
         </div>
       </section>
 
@@ -167,10 +156,11 @@ export default function Home() {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brown-400 to-beige-400 opacity-30 blur-2xl" />
             <Image
-              src="/images/profile.svg"
+              src="/images/img - principal.jpeg"
               alt="Ana Beatriz, maquiadora profissional"
-              width={560}
-              height={640}
+              width={640}
+              height={720}
+              priority
               className="relative w-full rounded-[2rem] border-4 border-white object-cover shadow-xl"
             />
           </div>
