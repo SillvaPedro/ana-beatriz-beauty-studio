@@ -15,7 +15,7 @@ const steps = [
   },
   {
     title: "2. Realize sua aula presencial",
-    description: "Aula individual e personalizada, com acompanhamento passo a passo.",
+    description: "Aula individual ou em grupo e personalizada, com acompanhamento passo a passo.",
   },
   {
     title: "3. Leve sua apostila",
@@ -24,7 +24,7 @@ const steps = [
 ];
 
 const included = [
-  "Aula presencial individual",
+  "Aula presencial individual ou em grupo",
   "Apostila inclusa",
   "Acompanhamento passo a passo",
   "Suporte pelo WhatsApp antes e depois da aula",
@@ -45,7 +45,7 @@ export default function CursosPage() {
             Aprenda automaquiagem comigo
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-ink/70">
-            Aula presencial e personalizada, com apostila inclusa, para você aprender a valorizar
+            Aula presencial ou em grupo personalizada, com apostila inclusa, para você aprender a valorizar
             sua beleza no dia a dia.
           </p>
         </div>

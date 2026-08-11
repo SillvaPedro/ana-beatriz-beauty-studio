@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Vocês atendem em domicílio?",
     answer:
-      "Sim! Atendemos em domicílio em São Paulo e região, com taxa de deslocamento calculada conforme a distância.",
+      "Sim! Atendemos em domicílio em Remigio e região, com taxa de deslocamento calculada conforme a distância.",
   },
   {
     question: "Preciso pagar sinal para reservar?",
@@ -65,11 +65,10 @@ export default function AgendamentoPage() {
               {services.map((service) => (
                 <li
                   key={service.id}
-                  className={`flex items-center justify-between gap-3 py-3 text-sm ${
-                    service.id === "combo-dia-completo"
+                  className={`flex items-center justify-between gap-3 py-3 text-sm ${service.id === "combo-dia-completo"
                       ? "font-semibold text-brown-700"
                       : "text-ink"
-                  }`}
+                    }`}
                 >
                   <span className={service.id === "combo-dia-completo" ? "font-display" : "font-semibold"}>
                     {service.label}
