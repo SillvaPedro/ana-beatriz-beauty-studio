@@ -15,7 +15,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-xl font-semibold">Ana Beatriz Makeup Studio</p>
           <p className="mt-3 max-w-xs text-sm text-white/80">
-            Maquiagem profissional e cursos online de automaquiagem.
+            Maquiagem profissional e curso de automaquiagem.
           </p>
         </div>
         <div>
@@ -31,7 +31,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-beige-200">Contato</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-beige-200">Contatos</p>
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li>
               <a

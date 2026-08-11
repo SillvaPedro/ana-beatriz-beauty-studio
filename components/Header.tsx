@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 const links = [
   { href: "/", label: "Início" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/cursos", label: "Cursos" },
+  { href: "/cursos", label: "Curso" },
   { href: "/agendamento", label: "Agendamento" },
 ];
 
@@ -22,8 +22,7 @@ export default function Header() {
             AB
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-ink">
-            Ana Beatriz
-            <span className="text-brown-600"> Makeup Studio</span>
+            Ana Beatriz Makeup Studio
           </span>
         </Link>
 
