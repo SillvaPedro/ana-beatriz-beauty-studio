@@ -196,13 +196,14 @@ export default function Home() {
               Olá, eu sou a Ana Beatriz
             </h2>
             <p className="mt-5 leading-relaxed text-ink/70">
-              Há mais de 7 anos eu transformo a forma como minhas clientes e alunas se enxergam.
-              Especialista em maquiagem para eventos e noivas, criei um curso de automaquiagem presencial
-              para você aprender na prática, com apostila e atendimento personalizado.
+              Há mais de 2 anos eu transformo a forma como minhas clientes e alunas se enxergam, realizando
+              atendimentos em Remigio e região. Especialista em maquiagem para eventos e noivas, criei um
+              curso de automaquiagem presencial para você aprender na prática, com apostila e atendimento
+              personalizado.
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                "Atendimento em São Paulo e região",
+                "Atendimento em Remigio e região",
                 "Mais de 500 maquiagens realizadas",
                 "Curso presencial com apostila inclusa",
               ].map((item) => (
