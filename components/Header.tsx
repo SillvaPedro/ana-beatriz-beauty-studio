@@ -23,7 +23,7 @@ export default function Header() {
           </span>
           <span className="font-display text-lg font-semibold tracking-tight text-ink">
             Ana Beatriz
-            <span className="text-brown-600"> Studio</span>
+            <span className="text-brown-600"> Makeup Studio</span>
           </span>
         </Link>
 
