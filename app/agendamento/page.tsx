@@ -9,10 +9,14 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { id: "noivas", label: "Maquiagem de noiva", price: "A partir de R$ 450" },
-  { id: "eventos", label: "Maquiagem para evento", price: "A partir de R$ 180" },
-  { id: "ensaios", label: "Ensaios fotográficos", price: "A partir de R$ 250" },
-  { id: "domicilio", label: "Atendimento em domicílio", price: "Consulte" },
+  { id: "make", label: "Make", price: "R$80,00" },
+  { id: "make-cabelo", label: "Make & Cabelo", price: "R$150,00" },
+  { id: "combo-estudio", label: "Combo Make + Cabelo + Fotos editadas (estúdio)", price: "R$200,00" },
+  { id: "combo-externo", label: "Combo Make + Cabelo + Fotos editadas (externas)", price: "R$250,00" },
+  { id: "edicao-video", label: "Edição de vídeo gravado pelo cliente", price: "R$50,00" },
+  { id: "cobertura-stories", label: "Cobertura de stories", price: "R$150,00" },
+  { id: "artes", label: "Artes para perfil comercial", price: "R$50,00 (por arte)" },
+  { id: "combo-dia-completo", label: "Dia completo: Vídeo + edição + fotos + cobertura de stories", price: "R$300,00" },
 ];
 
 const faqs = [
@@ -59,9 +63,20 @@ export default function AgendamentoPage() {
             <h2 className="font-display text-xl font-bold text-ink">Serviços e valores</h2>
             <ul className="mt-4 divide-y divide-brown-50">
               {services.map((service) => (
-                <li key={service.id} className="flex items-center justify-between py-3 text-sm">
-                  <span className="font-semibold text-ink">{service.label}</span>
-                  <span className="text-brown-700">{service.price}</span>
+                <li
+                  key={service.id}
+                  className={`flex items-center justify-between gap-3 py-3 text-sm ${
+                    service.id === "combo-dia-completo"
+                      ? "font-semibold text-brown-700"
+                      : "text-ink"
+                  }`}
+                >
+                  <span className={service.id === "combo-dia-completo" ? "font-display" : "font-semibold"}>
+                    {service.label}
+                  </span>
+                  <span className={service.id === "combo-dia-completo" ? "text-lg font-bold" : "text-brown-700"}>
+                    {service.price}
+                  </span>
                 </li>
               ))}
             </ul>
