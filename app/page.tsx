@@ -26,15 +26,15 @@ const serviceGroups = [
 const testimonials = [
   {
     text: "Fiz o curso de automaquiagem presencial e hoje consigo montar looks lindos para qualquer ocasião. As aulas são claras e muito didáticas!",
-    author: "Mariana S.",
+    author: "Ariely",
   },
   {
     text: "Ana Beatriz fez a minha maquiagem de casamento. Perfeita, durou o dia inteiro e recebi elogios de todos. Recomendo demais!",
-    author: "Juliana P.",
+    author: "Sidneia",
   },
   {
     text: "Fiz o curso de automaquiagem com a Ana Beatriz. A apostila e o acompanhamento passo a passo fizeram toda a diferença. Recomendo demais!",
-    author: "Carla M.",
+    author: "Iza",
   },
 ];
 
