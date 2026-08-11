@@ -1,8 +1,8 @@
 export const site = {
   name: "Ana Beatriz Beauty Studio",
-  tagline: "Maquiagem profissional & cursos online",
+  tagline: "Maquiagem profissional & curso de automaquiagem",
   description:
-    "Studio de maquiagem com atendimento personalizado e cursos online de automaquiagem. Realce sua beleza com Ana Beatriz.",
+    "Studio de maquiagem com atendimento personalizado e curso presencial de automaquiagem. Realce sua beleza com Ana Beatriz.",
   instagram: "https://www.instagram.com/anabeatrizbeauty_studio/",
   instagramHandle: "@anabeatrizbeauty_studio",
   whatsapp: "https://wa.me/83998064139",
@@ -13,54 +13,19 @@ export const site = {
 
 export const courses = [
   {
-    slug: "automaquiagem-para-iniciantes",
-    title: "Automaquiagem para Iniciantes",
+    slug: "automaquiagem-presencial",
+    title: "Automaquiagem Presencial",
     description:
-      "Do zero ao look pronto: base, contorno, sombra e lábios explicados passo a passo para o seu dia a dia.",
-    duration: "2h30",
-    lessons: 18,
+      "Aula presencial e personalizada para você aprender a se maquiar no dia a dia, com apostila inclusa.",
+    duration: "4h",
+    lessons: 1,
     level: "Iniciante",
-    price: "R$ 49,90",
-    oldPrice: "R$ 79,90",
+    price: "Consulte o valor",
     highlights: [
-      "Aulas gravadas e vitalícias",
-      "Lista de produtos acessíveis",
-      "Certificado de conclusão",
+      "Aula presencial individual",
+      "Apostila inclusa",
+      "Acompanhamento passo a passo",
       "Suporte via WhatsApp",
-    ],
-  },
-  {
-    slug: "maquiagem-para-eventos",
-    title: "Maquiagem para Eventos",
-    description:
-      "Looks de festa, casamento e formatura com acabamento profissional. Aprenda técnicas de longa duração.",
-    duration: "3h",
-    lessons: 24,
-    level: "Intermediário",
-    price: "R$ 79,90",
-    oldPrice: "R$ 119,90",
-    highlights: [
-      "Técnicas de fixação e longa duração",
-      "Looks para pele negra e madura",
-      "Certificado de conclusão",
-      "Acesso vitalício",
-    ],
-  },
-  {
-    slug: "curso-profissional-completo",
-    title: "Curso Profissional Completo",
-    description:
-      "Formação completa para quem quer atuar como maquiadora profissional: atendimento, marketing e técnicas.",
-    duration: "12h",
-    lessons: 62,
-    level: "Avançado",
-    price: "R$ 199,90",
-    oldPrice: "R$ 299,90",
-    highlights: [
-      "Formação de maquiadora profissional",
-      "Módulo de marketing e precificação",
-      "Atendimento ao cliente",
-      "Certificado + suporte exclusivo",
     ],
   },
 ];

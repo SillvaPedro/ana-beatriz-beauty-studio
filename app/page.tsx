@@ -10,8 +10,8 @@ const services = [
     icon: "M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z",
   },
   {
-    title: "Cursos Online",
-    description: "Autoatendimento: aprenda no seu ritmo, com acesso vitalício e certificado.",
+    title: "Curso de Automaquiagem",
+    description: "Aula presencial e personalizada, com apostila inclusa, para você aprender no seu ritmo.",
     icon: "M4 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H9l-5 4V5zm6 3v4l3-2z",
   },
   {
@@ -23,7 +23,7 @@ const services = [
 
 const testimonials = [
   {
-    text: "Fiz o curso de automaquiagem e hoje consigo montar looks lindos para qualquer ocasião. As aulas são claras e muito didáticas!",
+    text: "Fiz o curso de automaquiagem presencial e hoje consigo montar looks lindos para qualquer ocasião. As aulas são claras e muito didáticas!",
     author: "Mariana S.",
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     author: "Juliana P.",
   },
   {
-    text: "O curso profissional mudou minha carreira. Aprendi técnicas, precificação e como atender clientes. Estou faturando com maquiagem!",
+    text: "Fiz o curso de automaquiagem com a Ana Beatriz. A apostila e o acompanhamento passo a passo fizeram toda a diferença. Recomendo demais!",
     author: "Carla M.",
   },
 ];
@@ -62,7 +62,7 @@ export default function Home() {
                 href="/cursos"
                 className="rounded-full border-2 border-brown-600 px-7 py-3 text-sm font-semibold text-brown-700 transition-colors hover:bg-brown-600 hover:text-white"
               >
-                Ver cursos online
+                Ver o curso
               </Link>
             </div>
           </div>
@@ -134,13 +134,13 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-brown-600">
-            Cursos de autoatendimento
+            Curso de automaquiagem
           </p>
           <h2 className="mt-2 font-display text-3xl font-bold text-ink sm:text-4xl">
-            Aprenda no seu ritmo
+            Aprenda na prática
           </h2>
           <p className="mt-4 text-ink/70">
-            Aulas gravadas, acesso vitalício e certificado de conclusão. Comece hoje mesmo.
+            Aula presencial com apostila inclusa, passo a passo e atendimento personalizado. Agende sua vaga.
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -171,14 +171,14 @@ export default function Home() {
             </h2>
             <p className="mt-5 leading-relaxed text-ink/70">
               Há mais de 7 anos eu transformo a forma como minhas clientes e alunas se enxergam.
-              Especialista em maquiagem para eventos e noivas, criei cursos online para que você
-              aprenda automaquiagem — do básico ao profissional — de forma simples e no seu tempo.
+              Especialista em maquiagem para eventos e noivas, criei um curso de automaquiagem presencial
+              para você aprender na prática, com apostila e atendimento personalizado.
             </p>
             <ul className="mt-6 space-y-3">
               {[
                 "Atendimento em São Paulo e região",
                 "Mais de 500 maquiagens realizadas",
-                "Cursos online com suporte direto",
+                "Curso presencial com apostila inclusa",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-ink/80">
                   <svg viewBox="0 0 20 20" className="mt-0.5 h-5 w-5 shrink-0 text-beige-500" fill="currentColor">
@@ -239,7 +239,7 @@ export default function Home() {
             Pronta para arrasar?
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-white/90">
-            Agende sua maquiagem ou garanta seu acesso aos cursos online com condições especiais.
+            Agende sua maquiagem ou garanta sua vaga no curso de automaquiagem presencial.
           </p>
           <div className="relative mt-8 flex flex-wrap justify-center gap-4">
             <Link
@@ -252,7 +252,7 @@ export default function Home() {
               href="/cursos"
               className="rounded-full border-2 border-white px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-brown-700"
             >
-              Conhecer os cursos
+              Conhecer o curso
             </Link>
           </div>
         </div>

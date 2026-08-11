@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   keywords: [
     "maquiagem profissional",
     "maquiadora",
-    "cursos de maquiagem online",
+    "curso de automaquiagem presencial",
     "automaquiagem",
     "maquiagem para noivas",
     site.name,

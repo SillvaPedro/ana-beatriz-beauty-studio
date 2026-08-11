@@ -36,7 +36,7 @@ export default function CourseCard({ course }: { course: course }) {
             )}
             <p className="text-lg font-bold text-brown-700">{course.price}</p>
             <p className="text-xs text-ink/60">
-              {course.duration} · {course.lessons} aulas
+              {course.duration} · {course.lessons} {course.lessons === 1 ? "aula" : "aulas"}
             </p>
           </div>
           <a
@@ -45,7 +45,7 @@ export default function CourseCard({ course }: { course: course }) {
             rel="noopener noreferrer"
             className="rounded-full bg-gradient-to-r from-brown-600 to-beige-500 px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
-            Comprar
+            Agendar
           </a>
         </div>
       </div>

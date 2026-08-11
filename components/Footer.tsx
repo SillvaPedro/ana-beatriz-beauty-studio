@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 const links = [
   { href: "/", label: "Início" },
   { href: "/portfolio", label: "Portfólio" },
-  { href: "/cursos", label: "Cursos" },
+  { href: "/cursos", label: "Curso" },
   { href: "/agendamento", label: "Agendamento" },
 ];
 
