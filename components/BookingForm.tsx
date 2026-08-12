@@ -55,12 +55,32 @@ export default function BookingForm() {
     setLoading(Boolean(value));
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (date && time && availability.booked.includes(time)) {
-      setTime("");
-      alert("Esse horário acabou de ser agendado por outra cliente. Escolha outro.");
-      return;
+
+    if (date && time) {
+      try {
+        const response = await fetch("/api/availability", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ date, time }),
+        });
+        const data = await response.json();
+        if (!data.reserved) {
+          setTime("");
+          alert(
+            "Esse horário acabou de ser agendado por outra cliente. Escolha outro e tente novamente."
+          );
+          fetch(`/api/availability?date=${encodeURIComponent(date)}`)
+            .then((res) => res.json())
+            .then((fresh) => setAvailability(fresh))
+            .catch(() => undefined);
+          return;
+        }
+      } catch {
+        alert("Não foi possível confirmar o horário. Verifique sua conexão e tente novamente.");
+        return;
+      }
     }
     const text = `Olá, Ana Beatriz! Gostaria de agendar um atendimento.%0A%0ANome: ${encodeURIComponent(
       name

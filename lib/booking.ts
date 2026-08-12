@@ -1,18 +1,7 @@
-export const availableTimeSlots = [
-  "08:00",
-  "09:00",
-  "10:00",
-  "11:00",
-  "12:00",
-  "13:00",
-  "14:00",
-  "15:00",
-  "16:00",
-  "17:00",
-  "18:00",
-  "19:00",
-];
+const startHour = 8;
+const endHour = 22;
 
-export const bookedSlots: Record<string, string[]> = {
-  // "2026-08-15": ["09:00", "14:00"],
-};
+export const availableTimeSlots = Array.from(
+  { length: endHour - startHour + 1 },
+  (_, index) => `${String(startHour + index).padStart(2, "0")}:00`
+);
