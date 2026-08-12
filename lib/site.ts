@@ -17,7 +17,7 @@ export const courses = [
     title: "Automaquiagem Presencial",
     description:
       "Aula presencial e personalizada para você aprender a se maquiar no dia a dia, com apostila inclusa.",
-    duration: "4h",
+    duration: "2 a 3 horas",
     lessons: 1,
     level: "Iniciante",
     price: "Consulte o valor",
