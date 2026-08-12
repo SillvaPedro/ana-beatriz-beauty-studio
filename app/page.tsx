@@ -182,7 +182,7 @@ export default function Home() {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-brown-400 to-beige-400 opacity-30 blur-2xl" />
             <Image
-              src="/images/img - principal.jpeg"
+              src="/images/imagem-sobre-mim.jpeg"
               alt="Ana Beatriz, maquiadora profissional"
               width={640}
               height={720}
