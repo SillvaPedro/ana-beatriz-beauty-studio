@@ -3,7 +3,7 @@ import { availableTimeSlots } from "@/lib/booking";
 
 let db: ReturnType<typeof postgres> | null = null;
 
-function getDb() {
+export function getDb() {
   if (!db) {
     db = postgres(process.env.POSTGRES_URL as string);
   }
