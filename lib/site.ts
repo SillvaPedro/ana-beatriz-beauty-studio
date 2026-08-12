@@ -20,7 +20,11 @@ export const courses = [
     duration: "2 a 3 horas",
     lessons: 1,
     level: "Iniciante",
-    price: "Consulte o valor",
+    price: "R$150,00",
+    priceOptions: [
+      { label: "Aula individual", value: "R$150,00" },
+      { label: "Aula em grupo (até 4 pessoas)", value: "R$120,00 por pessoa" },
+    ],
     highlights: [
       "Aula presencial individual",
       "Apostila inclusa",

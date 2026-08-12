@@ -72,9 +72,23 @@ export default function CursosPage() {
                 <p>
                   <span className="font-bold text-brown-700">Duração:</span> {course.duration}
                 </p>
-                <p>
-                  <span className="font-bold text-brown-700">Investimento:</span> {course.price}
-                </p>
+                <div>
+                  <p>
+                    <span className="font-bold text-brown-700">Investimento:</span>
+                  </p>
+                  {course.priceOptions ? (
+                    <ul className="mt-1 space-y-1">
+                      {course.priceOptions.map((option) => (
+                        <li key={option.label}>
+                          <span className="font-bold text-brown-700">{option.value}</span>{" "}
+                          — {option.label}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{course.price}</p>
+                  )}
+                </div>
               </div>
               <a
                 href={site.whatsapp}

@@ -34,7 +34,18 @@ export default function CourseCard({ course }: { course: course }) {
             {course.oldPrice && (
               <p className="text-xs text-ink/50 line-through">{course.oldPrice}</p>
             )}
-            <p className="text-lg font-bold text-brown-700">{course.price}</p>
+            {course.priceOptions ? (
+              <ul className="space-y-1">
+                {course.priceOptions.map((option) => (
+                  <li key={option.label} className="text-sm leading-snug">
+                    <span className="font-bold text-brown-700">{option.value}</span>{" "}
+                    <span className="text-xs text-ink/60">— {option.label}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-lg font-bold text-brown-700">{course.price}</p>
+            )}
             <p className="text-xs text-ink/60">
               {course.duration} · {course.lessons} {course.lessons === 1 ? "aula" : "aulas"}
             </p>

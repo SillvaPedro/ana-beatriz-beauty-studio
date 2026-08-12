@@ -7,6 +7,7 @@ export type course = {
   level: string;
   price: string;
   oldPrice?: string;
+  priceOptions?: { label: string; value: string }[];
   highlights: string[];
 };
 
