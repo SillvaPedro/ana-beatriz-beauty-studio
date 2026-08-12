@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
 const serviceOptions = [
@@ -11,19 +11,64 @@ const serviceOptions = [
   "Outro",
 ];
 
+type Availability = {
+  available: string[];
+  booked: string[];
+};
+
 export default function BookingForm() {
   const [name, setName] = useState("");
   const [service, setService] = useState(serviceOptions[0]);
   const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
   const [message, setMessage] = useState("");
+  const [availability, setAvailability] = useState<Availability>({
+    available: [],
+    booked: [],
+  });
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!date) return;
+    let cancelled = false;
+    fetch(`/api/availability?date=${encodeURIComponent(date)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (!cancelled) setAvailability(data);
+      })
+      .catch(() => {
+        if (!cancelled) setAvailability({ available: [], booked: [] });
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [date]);
+
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setDate(value);
+    setTime("");
+    setAvailability({ available: [], booked: [] });
+    setLoading(Boolean(value));
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (date && time && availability.booked.includes(time)) {
+      setTime("");
+      alert("Esse horário acabou de ser agendado por outra cliente. Escolha outro.");
+      return;
+    }
     const text = `Olá, Ana Beatriz! Gostaria de agendar um atendimento.%0A%0ANome: ${encodeURIComponent(
       name
     )}%0AServiço: ${encodeURIComponent(service)}%0AData desejada: ${encodeURIComponent(
       date || "A combinar"
-    )}%0AObservações: ${encodeURIComponent(message || "Nenhuma")}`;
+    )}%0AHorário desejado: ${encodeURIComponent(time || "A combinar")}%0AObservações: ${encodeURIComponent(
+      message || "Nenhuma"
+    )}`;
     window.open(`${site.whatsapp}?text=${text}`, "_blank", "noopener,noreferrer");
   };
 
@@ -68,15 +113,52 @@ export default function BookingForm() {
 
       <div>
         <label htmlFor="date" className={labelClass}>
-          Data desejada <span className="font-normal text-ink/50">(opcional)</span>
+          Data desejada
         </label>
         <input
           id="date"
           type="date"
+          required
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={handleDateChange}
           className={inputClass}
         />
+      </div>
+
+      <div>
+        <label htmlFor="time" className={labelClass}>
+          Horário desejado
+        </label>
+        <select
+          id="time"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          required={Boolean(date)}
+          disabled={!date || loading}
+          className={inputClass}
+        >
+          <option value="" disabled>
+            {!date
+              ? "Escolha a data primeiro"
+              : loading
+              ? "Carregando horários..."
+              : "Escolha um horário"}
+          </option>
+          {availability.available.map((slot) => (
+            <option key={slot} value={slot}>
+              {slot}
+            </option>
+          ))}
+        </select>
+        {availability.booked.length > 0 && (
+          <p className="mt-2 text-xs text-brown-600">
+            {availability.booked.length}{" "}
+            {availability.booked.length === 1
+              ? "horário já foi agendado e foi bloqueado"
+              : "horários já foram agendados e foram bloqueados"}
+            .
+          </p>
+        )}
       </div>
 
       <div>
