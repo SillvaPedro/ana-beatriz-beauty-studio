@@ -37,7 +37,7 @@ export default function PortfolioPage() {
 
       <div id="todos" className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>div]:mb-5">
         {portfolioItems.map((item) => (
-          <div key={item.title} className="group relative break-inside-avoid overflow-hidden rounded-2xl">
+          <div key={item.title} className="group relative mx-auto max-w-[300px] break-inside-avoid overflow-hidden rounded-2xl">
             <Image
               src={item.src}
               alt={item.alt}
