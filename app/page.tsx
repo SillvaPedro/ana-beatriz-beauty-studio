@@ -166,9 +166,11 @@ export default function Home() {
             Aula presencial com apostila inclusa, passo a passo e atendimento personalizado. Agende sua vaga.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 flex justify-center">
           {courses.map((course) => (
-            <CourseCard key={course.slug} course={course} />
+            <div key={course.slug} className="w-full max-w-md">
+              <CourseCard course={course} />
+            </div>
           ))}
         </div>
       </section>
