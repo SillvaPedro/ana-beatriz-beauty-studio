@@ -52,7 +52,7 @@ export default function CursosPage() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-        <div className="overflow-hidden rounded-2xl border border-brown-100 bg-white shadow-sm">
+        <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-brown-100 bg-white shadow-sm">
           <div className="grid gap-0 md:grid-cols-2">
             <div className="relative h-56 md:h-auto">
               <Image
