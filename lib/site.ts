@@ -41,8 +41,4 @@ export const portfolioItems = [
   { src: "/images/maquiagem.jpeg", alt: "Maquiagem social", category: "Eventos", title: "Maquiagem" },
   { src: "/images/maquiagem bia.jpeg", alt: "Maquiagem Bia", category: "Eventos", title: "Maquiagem Bia" },
   { src: "/images/maquiagem stefany.jpeg", alt: "Maquiagem Stefany", category: "Eventos", title: "Maquiagem Stefany" },
-  { src: "/images/portfolio/social.svg", alt: "Maquiagem para festa", category: "Eventos", title: "Look Festa" },
-  { src: "/images/portfolio/social2.svg", alt: "Maquiagem social sofisticada", category: "Eventos", title: "Social Sofisticado" },
-  { src: "/images/portfolio/automaquiagem.svg", alt: "Maquiagem para o dia a dia", category: "Dia a Dia", title: "Make Rápida" },
-  { src: "/images/portfolio/dia-a-dia.svg", alt: "Maquiagem natural", category: "Dia a Dia", title: "Look Natural" },
 ];

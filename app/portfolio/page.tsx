@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Trabalhos de maquiagem profissional realizados pela Ana Beatriz.",
 };
 
-const categories = ["Todos", "Noivas", "Eventos", "Dia a Dia"];
+const categories = ["Todos", "Noivas", "Eventos"];
 
 export default function PortfolioPage() {
   return (
@@ -35,15 +35,15 @@ export default function PortfolioPage() {
         ))}
       </div>
 
-      <div id="todos" className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>div]:mb-5">
+      <div id="todos" className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {portfolioItems.map((item) => (
-          <div key={item.title} className="group relative mx-auto max-w-[300px] break-inside-avoid overflow-hidden rounded-2xl">
+          <div key={item.title} className="group relative overflow-hidden rounded-2xl">
             <Image
               src={item.src}
               alt={item.alt}
               width={600}
               height={750}
-              className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-brown-950/70 to-transparent p-5 opacity-0 transition-opacity group-hover:opacity-100">
               <div>
