@@ -37,6 +37,10 @@ export const courses = [
 export const portfolioItems = [
   { src: "/images/noiva1.jpg", alt: "Maquiagem para noiva", category: "Noivas", title: "Look Noiva" },
   { src: "/images/noiva2.jpg", alt: "Maquiagem de noiva clássica", category: "Noivas", title: "Noiva Clássica" },
+  { src: "/images/maquiagem thaisa.jpeg", alt: "Maquiagem Thais", category: "Eventos", title: "Maquiagem Thais" },
+  { src: "/images/maquiagem.jpeg", alt: "Maquiagem social", category: "Eventos", title: "Maquiagem" },
+  { src: "/images/maquiagem bia.jpeg", alt: "Maquiagem Bia", category: "Eventos", title: "Maquiagem Bia" },
+  { src: "/images/maquiagem stefany.jpeg", alt: "Maquiagem Stefany", category: "Eventos", title: "Maquiagem Stefany" },
   { src: "/images/portfolio/social.svg", alt: "Maquiagem para festa", category: "Eventos", title: "Look Festa" },
   { src: "/images/portfolio/social2.svg", alt: "Maquiagem social sofisticada", category: "Eventos", title: "Social Sofisticado" },
   { src: "/images/portfolio/automaquiagem.svg", alt: "Maquiagem para o dia a dia", category: "Dia a Dia", title: "Make Rápida" },
