@@ -46,12 +46,9 @@ export default function PortfolioPage() {
               className="aspect-[4/5] w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-brown-950/70 to-transparent p-5 opacity-0 transition-opacity group-hover:opacity-100">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-beige-200">
-                  {item.category}
-                </p>
-                <p className="font-display text-xl font-semibold text-white">{item.title}</p>
-              </div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-beige-200">
+                {item.category}
+              </p>
             </div>
           </div>
         ))}
