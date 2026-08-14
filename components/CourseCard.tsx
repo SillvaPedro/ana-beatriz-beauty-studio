@@ -7,7 +7,7 @@ export default function CourseCard({ course }: { course: course }) {
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-brown-100 bg-white shadow-sm transition-shadow hover:shadow-lg">
       <div className="relative h-44 overflow-hidden">
         <Image
-          src={`/images/courses/${course.slug}.svg`}
+          src={course.image ?? `/images/courses/${course.slug}.svg`}
           alt={course.title}
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"

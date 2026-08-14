@@ -5,6 +5,7 @@ export type course = {
   duration: string;
   lessons: number;
   level: string;
+  image?: string;
   price: string;
   oldPrice?: string;
   priceOptions?: { label: string; value: string }[];

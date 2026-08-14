@@ -56,7 +56,7 @@ export default function CursosPage() {
           <div className="grid gap-0 md:grid-cols-2">
             <div className="relative h-56 md:h-auto">
               <Image
-                src="/images/courses/curso1.svg"
+                src={course.image ?? "/images/courses/curso1.svg"}
                 alt={course.title}
                 fill
                 className="object-cover"

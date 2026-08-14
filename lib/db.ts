@@ -5,7 +5,13 @@ let db: ReturnType<typeof postgres> | null = null;
 
 export function getDb() {
   if (!db) {
-    db = postgres(process.env.POSTGRES_URL as string);
+    const url = process.env.POSTGRES_URL;
+    if (!url) {
+      throw new Error(
+        "POSTGRES_URL não definida. Configure a variável de ambiente no .env.local."
+      );
+    }
+    db = postgres(url);
   }
   return db;
 }

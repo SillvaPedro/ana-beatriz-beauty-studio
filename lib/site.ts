@@ -20,6 +20,7 @@ export const courses = [
     duration: "2 a 3 horas",
     lessons: 1,
     level: "Iniciante",
+    image: "/images/courses/curso1.svg",
     price: "R$150,00",
     priceOptions: [
       { label: "Aula individual", value: "R$150,00" },
